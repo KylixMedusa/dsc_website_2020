@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "dsc-website"
+    }
+  },
+  "defaultProject": "dsc-website",
+  "cli": {
+    "analytics": false
+  }
 }
