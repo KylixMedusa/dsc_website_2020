@@ -9,23 +9,29 @@ import { FooterComponent } from 'src/app/shared/footer/footer.component';
 import { MainComponent } from './main.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { SocialsComponent } from 'src/app/shared/socials/socials.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
+import { TogglerComponent } from 'src/app/shared/toggler/toggler.component';
 
 
 
 @NgModule({
   declarations: [
+    MainComponent,
     NavbarComponent,
     FooterComponent,
     HomeComponent,
     ProjectsComponent,
     TeamComponent,
     EventsComponent,
-    MainComponent
+    SocialsComponent,
+    TogglerComponent
   ],
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule
+    RouterModule,
+    AppRoutingModule
   ]
 })
 export class MainModule { }
