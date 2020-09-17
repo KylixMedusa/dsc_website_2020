@@ -1,0 +1,118 @@
+.navbar-container{
+    position: fixed;
+    top: 50%;
+    left: 40px;
+    min-height: 248px;
+    transform: translateY(calc(-50% - 27px));
+    width: max-content;
+    // display: flex;
+    // justify-content: space-around;
+    // flex-direction: column;
+    .menu-vert{
+        outline: 0;
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+        .menu-item{
+            outline: 0;
+            display: flex;
+            align-items: center;
+            .menu-preview{
+                position: relative;
+                height:44px;
+                width:44px;
+                opacity: 0.65;
+                svg{
+                    animation: menu-rotation 18s linear infinite;
+                    animation-play-state: paused;
+                }
+                i{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    color:#363D61;
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+    .tooltip {
+        display: inline-block;
+        background-color: #313443;
+        position: relative;
+        color:#ffffff;
+        padding: 6px 15px;
+        border-radius: 3px;
+        left: 20px;
+        visibility: hidden;
+        opacity: 0;
+        font-size: 13px;
+        letter-spacing: .5px;
+        transition: opacity 0.2s ease-in-out;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -4px;
+            top:8px;
+            transform: rotate(45deg);
+            width: 10px;
+            height: 10px;
+            background-color: inherit;
+        }
+    }
+    .menu-vert:hover{
+        .tooltip{
+        visibility: visible;
+        opacity: 1;
+        }
+        .menu-item{
+            .menu-preview{
+                opacity: 1;
+                svg{
+                    animation-play-state: running;
+                    circle{
+                        stroke: #ff3e3e;
+                    }
+                }
+                i{
+                    opacity: 0.65;
+                }
+            }
+        }
+    }
+    .menu-vert.active{
+        .menu-item{
+            .menu-preview{
+                opacity: 1;
+                border-radius: 50%;
+                border-width: 2px;
+                border-color: #ff3e3e;
+                box-shadow: 0 0 0 2px #ff3e3e, 0 16px 19px rgba(166,99,99,.28);
+                svg{
+                    circle{
+                        stroke: #ff3e3e;
+                        stroke-width: 2px;
+                        stroke-dashoffset: 0;
+                        stroke-dasharray: none;
+                    }
+                }
+                i{
+                    opacity: 1;
+                    color: #ff3e3e;
+                }
+            }
+        }
+    }
+}
+
+@keyframes menu-rotation{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(1turn);
+    }
+}

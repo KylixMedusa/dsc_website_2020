@@ -1,1 +1,13 @@
-<p>navbar works!</p>
+<div class="navbar-container">
+    <div routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} menu-vert">
+        <div class="menu-item" [routerLink]="[menuItem.path]">
+            <div class="menu-preview">
+                <svg class="menu__stroke" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="22" cy="22" r="21" stroke="#557593" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"></circle>
+                </svg>
+                <i class="fa {{menuItem.icon}}"></i>
+            </div>
+            <div class="tooltip">{{menuItem.title}}</div>
+        </div>
+    </div>
+</div>
