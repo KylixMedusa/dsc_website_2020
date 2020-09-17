@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  scrollHeightPercent:number = 0;
+
+  constructor(
+  ) { }
 
   ngOnInit(): void {
+    var node = document.getElementById("router-container");
+    this.scrollHeightPercent = (node.scrollTop/(node.scrollHeight - node.clientHeight))*100;
+    node.addEventListener('scroll',(e)=>this.checkScroll(e));
+  }
+
+  checkScroll(e){
+    this.scrollHeightPercent = (e.target.scrollTop/(e.target.scrollHeight - e.target.clientHeight))*100;
   }
 
 }

@@ -1,3 +1,10 @@
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+
+<div class="container">
+    <app-navbar></app-navbar>
+    <div class="router-container" id="router-container">
+        <router-outlet></router-outlet>
+    </div>
+    <app-socials [scrollHeightPercent] = "scrollHeightPercent"></app-socials>
+    <app-footer></app-footer>
+    <app-toggler></app-toggler>
+</div>
