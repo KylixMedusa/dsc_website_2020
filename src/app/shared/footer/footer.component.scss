@@ -1,0 +1,33 @@
+footer{
+    width: calc(100% - 55px);
+    position: fixed;
+    bottom: 0;
+    padding:10px 15px 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div{
+        p{
+            font-weight: 500;
+            color: #557593;
+            font-size: small;
+            letter-spacing: 1.5px;
+        }
+    }
+    .chat-button{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #2789e9;
+        cursor: pointer;
+        box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.06), 0 2px 32px 0 rgba(0, 0, 0, 0.16);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg{
+            width: 28px;
+            height: 32px;
+            fill:white;
+        }
+    }
+}
