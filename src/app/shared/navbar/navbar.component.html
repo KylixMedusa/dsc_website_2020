@@ -1,5 +1,9 @@
+<div class="navbar-toggle" (click)="navbarToggle()" id="navbar-toggler">
+    <i class="fa fa-angle-right"></i>
+</div>
+
 <div class="navbar-container">
-    <div routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} menu-vert">
+    <div routerLinkActive="active" *ngFor="let menuItem of menuItems; let i = index" class="{{menuItem.class}} menu-vert">
         <div class="menu-item" [routerLink]="[menuItem.path]">
             <div class="menu-preview">
                 <svg class="menu__stroke" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">

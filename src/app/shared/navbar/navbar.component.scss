@@ -1,15 +1,124 @@
+@mixin animation-enter($top,$name, $percent) {
+    @keyframes #{$name} {
+        0%{
+            top:0;
+            opacity:0;
+        }
+        #{$percent}{
+            opacity: 0;
+        }
+        100%{
+            top:$top;
+            opacity: 1;
+        }
+    }   
+}
+
+@mixin animation-popIn($top,$name, $i, $max) {
+    @if $i <= $max/2 {
+        @keyframes #{$name} {
+            0%{
+                left:0;
+                top:50%;
+                opacity:0;
+                transform: translateY(0);
+            }
+            100%{
+                top:$top;
+                left: 30px * $i;
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }  
+    } 
+    @else{
+        @keyframes #{$name} {
+            0%{
+                left:0;
+                top:50%;
+                opacity:0;
+                transform: translateY(0);
+            }
+            100%{
+                top:$top;
+                left: 30px * ($max - $i + 1);
+                opacity: 1;
+                transform: translateY(0);
+            }
+        } 
+    }
+}
+
+@mixin animation-popOut($top,$name, $i, $max) {
+    @if $i <= $max/2 {
+        @keyframes #{$name} {
+            0%{
+                left:30px * $i;
+                top:$top;
+                opacity:1;
+                transform: translateY(0);
+            }
+            100%{
+                top:50%;
+                left: 0;
+                opacity: 0;
+                transform: translateY(-50%);
+            }
+        }  
+    } 
+    @else{
+        @keyframes #{$name} {
+            0%{
+                top:$top;
+                left: 30px * ($max - $i + 1);
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100%{
+                left:0;
+                top:50%;
+                opacity:0;
+                transform: translateY(-50%);
+            }
+        } 
+    }
+}
+
+.navbar-toggle{
+    visibility: hidden;
+    height:70px;
+    width:20px;
+    background-color:rgba(#363D61,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 10px 10px 0;
+    position: fixed;
+    top:50%;
+    left:0;
+    transform: translateY(calc(-50% - 27px));
+    i{
+        color:black;
+        font-size: large;
+    }
+}
+
 .navbar-container{
     position: fixed;
     top: 50%;
     left: 40px;
-    min-height: 248px;
-    transform: translateY(calc(-50% - 27px));
+    min-height: calc( 5 * 74px);
+    transform: translateY(-50%);
     width: max-content;
     // display: flex;
     // justify-content: space-around;
     // flex-direction: column;
     .menu-vert{
+        position: absolute;
+        opacity: 0;
         outline: 0;
+        animation: open 1s linear forwards;
+        cursor: pointer;
         &:not(:last-child) {
             margin-bottom: 24px;
         }
@@ -22,6 +131,7 @@
                 height:44px;
                 width:44px;
                 opacity: 0.65;
+                border-radius: 50%;
                 svg{
                     animation: menu-rotation 18s linear infinite;
                     animation-play-state: paused;
@@ -87,7 +197,6 @@
         .menu-item{
             .menu-preview{
                 opacity: 1;
-                border-radius: 50%;
                 border-width: 2px;
                 border-color: #ff3e3e;
                 box-shadow: 0 0 0 2px #ff3e3e, 0 16px 19px rgba(166,99,99,.28);
@@ -114,5 +223,57 @@
     }
     100%{
         transform: rotate(1turn);
+    }
+}
+
+@media screen and (max-width:600px){
+    .navbar-toggle{
+        visibility: visible;
+        z-index: 10;
+    }
+    .navbar-container{
+        left: 0;
+        .menu-vert{
+            top:50%;
+            transform: translateY(-50%);
+            visibility: hidden;
+            .menu-preview{
+                background-color: white;
+            }
+        }
+        .tooltip{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    .navbar-toggle.open ~ .navbar-container{
+        @for $i from 1 through 5 {
+            .menu-vert:nth-child(n + #{$i}){
+                visibility: visible;
+                @include animation-popIn(68px * ($i - 1),pop-in#{$i}, $i, 5);
+                animation: pop-in#{$i} 0.2s linear forwards;
+            }
+        }
+    }
+    .navbar-toggle.close ~ .navbar-container{
+        @for $i from 1 through 5 {
+            .menu-vert:nth-child(n + #{$i}){
+                @include animation-popOut(68px * ($i - 1),pop-out#{$i}, $i, 5);
+                animation: pop-out#{$i} 0.2s linear forwards;
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:600px){
+    .navbar-container{
+        @for $i from 1 through 5 {
+            .menu-vert:nth-child(n + #{$i}){
+                @include animation-enter(68px * ($i - 1),enter-nav#{$i}, 15% * $i);
+                animation: enter-nav#{$i} 0.1s*$i linear forwards;
+                animation-delay:0.1s * $i * $i;
+            }
+        }
     }
 }
