@@ -9,6 +9,7 @@
     align-items: center;
     .scrollbar{
         height:100%;
+        // animation: enlarge 1s linear forwards;
         width:2px;
         background-color: rgb(202, 216, 228);
         border-radius: 3px;
@@ -41,5 +42,14 @@
                 margin-bottom: 0;
             }
         }
+    }
+}
+
+@keyframes enlarge{
+    from{
+        height:0%
+    }
+    to{
+        height:100%;
     }
 }
