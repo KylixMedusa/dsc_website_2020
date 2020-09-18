@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { SocialsComponent } from 'src/app/shared/socials/socials.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { TogglerComponent } from 'src/app/shared/toggler/toggler.component';
+import { MainSvgComponent } from 'src/app/svgs/main-svg/main-svg.component';
 
 
 
@@ -25,7 +26,8 @@ import { TogglerComponent } from 'src/app/shared/toggler/toggler.component';
     TeamComponent,
     EventsComponent,
     SocialsComponent,
-    TogglerComponent
+    TogglerComponent,
+    MainSvgComponent
   ],
   imports: [
     CommonModule,
