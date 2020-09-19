@@ -8,19 +8,83 @@
     .intro
     {
         display: grid;
+        width: 85%;
+        margin: 0 auto;
         grid-template-columns: auto auto;
-        width: 80%;
-        margin:0 auto;
-        margin-top:90px;
+        margin-top:120px;
     }
+ .text-content,.svg-content{
+     width: 50%;
+ }
+ .dsc-logo
+ {
+     width:70px;
+     height:70px;
+    
+ }
+ .text-content
+ {
+     span{
 
-    .text-content,.svg-content
-    {
-        width: 50%;
-    }
+         align-items: center;
+         display: flex;
+     }
+     h2{
+          margin-bottom: 30px;
+     }
+     p{
+         font-size: 18px;
+         font-weight: 100;
+         color: rgb(41, 40, 40);
+     }
+ }
+ .heading
+ {
+     color: rgb(155, 152, 152);
+     font-weight: lighter;
+ }
 
-    .svg-content{
+    
+ .icon
+ {
+     top: 900px;
+     display: none;
+     img{
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
         position: relative;
-    }
+        height: 50px;
+        width: 50px;
+     }
+ }
 
+}
+
+@media(max-width:768px)
+{
+    .home-container
+    {
+        .intro
+        {
+            width: 90%;
+            margin:50px auto;
+            display: flex;
+            flex-direction: column;
+         }
+         .text-content
+         {
+             width: 100%;
+             h2{
+                font-size: 20px;
+             }
+             p
+             {
+                 font-size: 16px;
+             }
+         }
+         .icon{
+             display: block;
+         }
+    }
 }

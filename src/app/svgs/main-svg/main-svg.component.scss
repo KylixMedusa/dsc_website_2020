@@ -1,10 +1,123 @@
 .svg-container
 {
+    position: relative;
+    right: 30px;
     img{
         position: absolute;
     }
+    .shadows
+    {
+        width: 400px;
+        height: 200px;
+        left: -320px;
+        top: 170px;
+    }
+    .floor
+    {
+        width:465px;
+        height:200px;  
+        left:-370px;
+        top:190px;  
+    }
     .character
     {
-        right:10%;
+        left:-290px;
+        top:62px;
+        z-index: 3;
+        height:300px;
+        width:190px;
+    }
+    .box-on-head
+    {
+        height:60px;
+        left: -220px;
+        top: -20px;
+    }
+    .table
+    {
+        height:300px;
+        width:310px;
+        top:28px;
+        left: -240px;
+    }
+    .plant
+    {
+        height:105px;
+        top: 230px;
+        z-index: 4;
+        left: -20px;
+    }
+    .keyboard
+    {
+        left:-174px;
+        height:85px;
+        width:120px;
+        top:100px;
+        z-index:1;
+        transform: rotateZ(-2deg);
+    }
+    .mouse
+    {
+        height:30px;
+        width:30px;
+        left: -40px;
+        top:140px;
+        z-index: 5;
+        // transform: rotateZ(-5deg);
+    }
+    .monitor
+    {
+        top:-35px;
+        left: -110px;
+        z-index: 3;
+        height:180px;
+    }
+    .screen1
+    {
+       top:-40px;
+       height:170px;
+       left: -80px;
+       z-index: 3;
+    }
+    .screen2
+    {
+         height:106px;
+         top:60px;
+         opacity: 0.8;
+         left:17px;
+         z-index: 4;
+    }
+    .csstab
+    {
+       height:70px;
+       left: -340px;
+       width: 70px;
+       top:-40px;
+    }
+    .htmltab
+    {
+       height:70px;
+       top:15px;
+       left: -340px;
+       width:70px;
+    }
+    .ctab{
+        height:70px;
+        width: 70px;
+        top:70px;
+        left: -340px;
+    }
+}
+
+@media(max-width:768px)
+{
+    .svg-container
+    {
+       left: 220px;
+       top:150px;
+       display: block;
+       height: 50%;
+       width:2%;
+       margin: 0 auto;
     }
 }
