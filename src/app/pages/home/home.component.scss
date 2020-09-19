@@ -1,5 +1,26 @@
-div{
+.home-container{
     height:500vh;
     width:100%;
+    
     // background-color: aliceblue;
+
+
+    .intro
+    {
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 80%;
+        margin:0 auto;
+        margin-top:90px;
+    }
+
+    .text-content,.svg-content
+    {
+        width: 50%;
+    }
+
+    .svg-content{
+        position: relative;
+    }
+
 }
