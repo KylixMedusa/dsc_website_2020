@@ -54,6 +54,18 @@
     }
 }
 
+@media (max-width:768px)
+{
+    .socials-container
+    {
+        right: 30px;
+    
+    .scrollbar
+    {
+       visibility: hidden;
+    }
+}
+}
 // @media (max-width: 450px){
 //     .socials-container{
 //         right: 35px;
