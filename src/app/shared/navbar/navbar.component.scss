@@ -133,7 +133,7 @@
                 opacity: 0.65;
                 border-radius: 50%;
                 svg{
-                    animation: menu-rotation 18s linear infinite;
+                    animation: menu-rotation 10s linear infinite;
                     animation-play-state: paused;
                 }
                 i{
@@ -271,8 +271,8 @@
         @for $i from 1 through 5 {
             .menu-vert:nth-child(n + #{$i}){
                 @include animation-enter(68px * ($i - 1),enter-nav#{$i}, 15% * $i);
-                animation: enter-nav#{$i} 0.1s*$i linear forwards;
-                animation-delay:0.1s * $i * $i;
+                animation: enter-nav#{$i} 0.08s*$i linear forwards;
+                animation-delay:0.03s * $i * $i;
             }
         }
     }

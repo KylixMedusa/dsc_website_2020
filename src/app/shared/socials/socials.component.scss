@@ -53,3 +53,10 @@
         height:100%;
     }
 }
+
+@media (max-width: 450px){
+    .socials-container{
+        right: 35px;
+        height: calc(100vh - 80px);
+    }
+}

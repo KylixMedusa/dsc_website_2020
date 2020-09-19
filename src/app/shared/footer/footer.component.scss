@@ -31,3 +31,13 @@ footer{
         }
     }
 }
+
+@media (max-width: 450px){
+    .chat-button{
+        transform-origin: center;
+        transform: scale(0.7);
+        svg{
+            transform: scale(0.7);
+        }
+    }
+}
