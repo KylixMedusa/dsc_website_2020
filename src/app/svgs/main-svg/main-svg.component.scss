@@ -1,0 +1,124 @@
+.image{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    z-index: 0;
+    #floor {
+        position: absolute;
+        width: 90.1%;
+        height: 50.15135%;
+        left: 4.95%;
+        top: 47.4%;
+        z-index: 0;
+    }
+    #shadows {
+        position: absolute;
+        width: 73.45%;
+        height: 44.15%;
+        left: 17.15%;
+        top: 47.15%;
+        z-index: 1;
+    }
+    #table {
+        position: absolute;
+        width: 60.2%;
+        height: 55.5%;
+        left: 30.75%;
+        top: 25.1%;
+        z-index: 2;
+        
+    }
+    #htmlbox {
+        position: absolute;
+        width: 11.9%;
+        height: 17.2%;
+        left: 32.25%;
+        top: 4.6%;
+        z-index: 10;
+        
+    }
+    #keyboard {
+        position: absolute;
+        width: 22.35%;
+        height: 13.95%;
+        left: 43.3%;
+        top: 36.05%;
+        z-index: 4;
+        
+    }
+    #mouse {
+        position: absolute;
+        width: 8.9%;
+        height: 5.85%;
+        left: 66.3%;
+        top: 46.35%;
+        z-index: 4;
+        
+    }
+    #plant {
+        position: absolute;
+        width: 17.05%;
+        height: 26.95%;
+        left: 70.5%;
+        top: 56.2%;
+        z-index: 4;
+        
+    }
+    #monitor {
+        position: absolute;
+        width: 28.4%;
+        height: 36.8%;
+        left: 53.75%;
+        top: 10.65%;
+        z-index: 4;
+    }
+    #screen1 {
+        position: absolute;
+        width: 28.25%;
+        height: 36.2%;
+        left: 57.95%;
+        top: 6.7%;
+        z-index: 5;
+    }
+    #screen2 {
+        position: absolute;
+        width: 11%;
+        height: 22.35%;
+        left: 81.65%;
+        top: 29.1%;
+        z-index: 6;
+    }
+    #tab1 {
+        position: absolute;
+        width: 14.2%;
+        height: 15.15%;
+        left: 7.65%;
+        top: 29.75%;
+        z-index: 10;
+    }
+    #tab2 {
+        position: absolute;
+        width: 14.2%;
+        height: 15.15%;
+        left: 7.65%;
+        top: 17.2%;
+        z-index: 10;
+    }
+    #tab3 {
+        position: absolute;
+        width: 14.2%;
+        height: 15.15%;
+        left: 7.65%;
+        top: 4.7%;
+        z-index: 10;
+    }
+    #character {
+        position: absolute;
+        width: 43.85%;
+        height: 67.6%;
+        left: 16.1%;
+        top: 22.95%;
+        z-index: 10;
+    }
+    
+}
