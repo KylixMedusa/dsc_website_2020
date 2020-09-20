@@ -6,7 +6,8 @@
     .router-container{
         height:100%;
         overflow-y: auto;
-        padding:0 10%;-ms-overflow-style: none;  /* IE and Edge */
+        padding:0 15%;
+        -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
         &::-webkit-scrollbar {
             display: none;

@@ -1,8 +1,8 @@
 footer{
-    width: calc(100% - 55px);
+    width: calc(100% - 60px);
     position: fixed;
     bottom: 0;
-    padding:10px 15px 10px 40px;
+    padding: 10px 20px 10px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,7 +11,7 @@ footer{
             font-weight: 500;
             color: #557593;
             font-size: small;
-            letter-spacing: 1.5px;
+            letter-spacing: 3px;
         }
     }
     .chat-button{
@@ -35,7 +35,8 @@ footer{
 @media (max-width:768px)
 {
     footer{
-            padding: 10px 10px 10px 40px;
+            padding: 10px 15px 10px 40px;
+            width: calc(100% - 55px);
              .copywright
             {
                 visibility: hidden;
@@ -47,6 +48,28 @@ footer{
                 {
                     width: 24px;
                     height: 30px;
+                }
+
+            }
+    }
+
+}
+@media (max-width:480px)
+{
+    footer{
+            padding: 10px 15px 10px 40px;
+            width: calc(100% - 55px);
+             .copywright
+            {
+                visibility: hidden;
+            }
+            .chat-button{
+                width: 40px;
+                height: 40px;
+                svg
+                {
+                    width: 15px;
+                    height: 20px;
                 }
 
             }

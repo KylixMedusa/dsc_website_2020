@@ -59,6 +59,15 @@
     .socials-container
     {
         right: 30px;
+    }
+}
+@media (max-width:600px)
+{
+    .socials-container
+    {
+        height: max-content;
+        top: auto;
+        bottom: 80px;
     
     .scrollbar
     {
@@ -66,9 +75,9 @@
     }
 }
 }
-// @media (max-width: 450px){
-//     .socials-container{
-//         right: 35px;
-//         height: calc(100vh - 80px);
-//     }
-// }
+@media (max-width: 480px){
+    .socials-container{
+        bottom: 70px;
+        right: 25px;
+    }
+}
